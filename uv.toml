@@ -1,0 +1,5 @@
+[project]
+name = "langchain-course"
+
+[tool.uv]
+env-file = ".env"
