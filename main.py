@@ -3,8 +3,6 @@ import os
 
 def main():
     print("Hello from langchain-course!")
-    #env_path = find_dotenv()
-    #print(env_path)
     #load_dotenv(env_path,override=True)
     load_dotenv()
     #print(os.environ.get("OPENAI_API_KEY"))
