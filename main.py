@@ -7,11 +7,43 @@ from langchain_core.messages import HumanMessage
 from tavily import TavilyClient
 #for readymade tool
 from langchain_tavily import TavilySearch
+from typing import List
+from pydantic import BaseModel, Field
 import os
 
 load_dotenv()
+
+#to format agent output
+class Source(BaseModel):
+    """Schema for a source used by the agent"""
+    url: str = Field(description="The URL of the source")
+
+#source class is nested here below, this is actual response
+class AgentResponse(BaseModel):
+    """Schema for agent response with answer and sources"""
+    answer: str = Field(description="Thr agent's answer to the query")
+    #list of source class objects
+    sources: List[Source] = Field(
+        default_factory=list, description="List of sources used to generate the answer"
+    )
+
 tavily = TavilyClient()
 
+# --- Pydantic schema for tool input ---
+class TavilyQuery(BaseModel):
+    """Schema for Tavily search tool"""
+    query: str = Field(..., description="Search query to look up online")
+    max_results: int = Field(3, description="Number of search results to return")
+
+@tool(args_schema=TavilyQuery)
+def tavily_search(query: str, max_results: int = 3):
+    """
+    Uses Tavily search engine to fetch the most relevant results.
+    """
+    print(f"Searching Tavily for: {query}")
+    return tavily.search(query=query, max_results=max_results)
+
+#custom search agent
 @tool
 def search(query : str) -> str:
     """
@@ -25,51 +57,18 @@ def search(query : str) -> str:
 
 llm = ChatOpenAI(model='gpt-5-mini')
 #tools = [search]
-tools=[TavilySearch]
-agent = create_agent(model=llm, tools=tools)
+#tools=[TavilySearch]
+# Use this tool instead of TavilySearch
+tools = [tavily_search]
+agent = create_agent(model=llm, tools=tools, response_format=AgentResponse)
 
 def main():
     print("Hello from langchain-course!")
     #print(os.getenv("OPENAI_API_KEY"))
     #result = agent.invoke({"messages":HumanMessage(content="What is the weather in tokyo")})
-    result = agent.invoke({"messages":HumanMessage(content="search for top 3 fastest flights between new york and london")})
+    result = agent.invoke({"messages":HumanMessage(content="give me senior ai engineer jobs in pune location india")})
     print(result)
 
 
 if __name__ == "__main__":
     main()
-
-# class Source(BaseModel):
-#     """Schema for a source used by the agent"""
-
-#     url: str = Field(description="The URL of the source")
-
-
-# class AgentResponse(BaseModel):
-#     """Schema for agent response with answer and sources"""
-
-#     answer: str = Field(description="Thr agent's answer to the query")
-#     sources: List[Source] = Field(
-#         default_factory=list, description="List of sources used to generate the answer"
-#     )
-
-
-# llm = ChatOpenAI(model="gpt-5")
-# tools = [TavilySearch()]
-# agent = create_agent(model=llm, tools=tools, response_format=AgentResponse)
-
-
-# def main():
-#     print("Hello from langchain-course!")
-#     result = agent.invoke(
-#         {
-#             "messages": HumanMessage(
-#                 content="search for 3 job postings for an ai engineer using langchain in the bay area on linkedin and list their details?"
-#             )
-#         }
-#     )
-#     print(result)
-
-
-# if __name__ == "__main__":
-#     main()
