@@ -29,7 +29,7 @@ def main():
     #langchain syntax
     chain = PromptTemplateDefintion | llm
     response = chain.invoke(input={"information": information})
-    print(response.content)
+    print(response)
 
 if __name__ == "__main__":
     main()
