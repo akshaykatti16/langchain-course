@@ -1,25 +1,39 @@
-
+Sidebar menu
 Search
 Write
+Notifications1
 
-Emarco
+Akshay Katti
+Home
+Library
+Profile
+Stories
+Stats
+Following
+Find writers and publications to follow.
+
+See suggestions
+Get unlimited access to the best of Medium for less than $1/week.
+Become a member
+
 Vector Database: What is it and why you should know it?
 Ejiro Onose
 Ejiro Onose
 
-·
-Follow
-
+Following
 9 min read
 ·
 Dec 22, 2023
-100
+291
+
+
+1
 
 
 
 
 
-
+Press enter or click to view image in full size
 
 “If 2021 was the year of graph databases, 2023 is the year of vector databases” — Chip Huen.
 
@@ -27,13 +41,14 @@ Why? you ask...
 
 Well, it’s because Generative AI and Large Language Models (LLMs) are now popular and one of the best ways to handle LLM data is with a vector database because vector databases provide the ideal infrastructure for managing the complex, high-dimensional data that LLMs produce and thrive on.
 
-In this article, I’ll discuss what vector databases are, how they work, and some excellent vector database tools you should check out.
+In this article, we’ll discuss what vector databases are, how they work, and some excellent vector database tools you should check out.
 
 Before we dive into vector databases, let’s first understand what a vector is.
 
 What is a Vector?
 In machine learning (ML), a vector is a collection of numerical values that represent the characteristics or features of multi-dimensional objects such as words, images, etc.
 
+Press enter or click to view image in full size
 
 source
 For example, a vector representing an image might contain values corresponding to the pixel intensities of the image, in the order of the image’s color channels.
@@ -66,6 +81,7 @@ They work by using algorithms like vector similarity search to index and query v
 
 The importance of vector databases in LLM projects lies in their ability to provide easy search, high performance, scalability, and data retrieval by comparing values and finding similarities between them
 
+Press enter or click to view image in full size
 
 Vector database’s search capabilities can be used in various applications ranging from classical ML use cases, such as recommender systems, to providing long-term memory to large language models in modern applications, to text understanding, video summarization, drug discovery, stock market analysis, and much more.
 
@@ -96,6 +112,7 @@ Qdrant
 Milvus
 Here’s an overview of some of the features of these vector databases. You can go see this comprehensive vector database features matrix by Dhruv Anand
 
+Press enter or click to view image in full size
 
 Source: Author
 Weaviate
@@ -113,6 +130,7 @@ Weaviate provides a user-friendly interface for managing vectors and performing 
 Pinecone
 Pinecone is a fully managed cloud-based vector database that is designed to make it easy for businesses and organizations to build and deploy large-scale ML applications.
 
+Press enter or click to view image in full size
 
 Some Pinecone Features:
 
@@ -127,9 +145,11 @@ Pinecone can be synced with data from various sources using tools like Airbyte a
 Chroma DB
 Chroma DB is an open-source vector store for storing and retrieving vector embeddings. It is mainly used to save embeddings along with metadata to be used later by LLMs and can also be used for semantic search engines over text data.
 
+Press enter or click to view image in full size
 
 Chroma DB offers a self-hosted server option and supports different underlying storage options like DuckDB for standalone or ClickHouse for scalability.
 
+Become a member
 Chroma DB offers two memory modes:
 
 The in-memory mode
@@ -146,6 +166,7 @@ Chroma can store vectors from various data types, including text, images, and au
 Qdrant
 Qdrant is an open-source vector database and vector search engine that provides fast and scalable vector similarity search services with additional payloads.
 
+Press enter or click to view image in full size
 
 Here are some of the features of Qdrant:
 
@@ -157,6 +178,7 @@ It can be used with the Python quadrant client, which provides a convenient API 
 Milvus
 Milvus is an open-source vector database that is designed for similarity searches in dense vector datasets containing millions or even billions of vectors. Milvus vector database adopts a systemic approach to cloud-nativity by separating compute from storage and allowing you to scale both up and out.
 
+Press enter or click to view image in full size
 
 Milvus docs
 Here are some of the features of Milvus:
@@ -192,199 +214,164 @@ Let me know what you think about the vector database tools mentioned here and I 
 
 Happy Building!
 
+….also you could buy me coffee …pretty please🤗🤗
+
 Vector Database
 Llm
 Embedding
 Vector
-100
+291
 
+
+1
 
 
 
 
 Ejiro Onose
 Written by Ejiro Onose
-115 Followers
+166 followers
+·
+256 following
 Still working on this....
 
-Follow
+
+Following
+Responses (1)
+Akshay Katti
+Akshay Katti
+What are your thoughts?
+Cancel
+Respond
+Pierre-Henry™
+Pierre-Henry™
+
+Jul 13 (edited)
+
+
+Excellent post Ejiro! 👌
+Reply
 
 More from Ejiro Onose
-Microservice Orchestration Best Practices
+Understanding Docs-as-Code
 Ejiro Onose
 Ejiro Onose
 
-in
-
-Ambassador Labs
-
-Microservice Orchestration Best Practices
-In this article, you’ll discover nine microservice orchestration best practices, the importance of orchestration, and more …
-8 min read
-·
-May 3, 2023
-368
-
-3
+Understanding Docs-as-Code
+Good documentation is an essential part of any software project.
+Nov 19, 2024
+58
 
 
-
-LLMs on Trial: Understanding LLM Evaluation Benchmarks
+DeepSeek-OCR: Solving LLM Context Limits with Optical Compression
 Ejiro Onose
 Ejiro Onose
 
-in
-
-Artificial Intelligence in Plain English
-
-LLMs on Trial: Understanding LLM Evaluation Benchmarks
-LLM evaluation benchmarks provide a more comprehensive way of testing LLMs on various tasks, allowing us to get a better understanding of…
-11 min read
-·
-Feb 14, 2024
-85
-
+DeepSeek-OCR: Solving LLM Context Limits with Optical Compression
+If you’ve ever tried to make an LLM analyze a massive PDF, a long codebase, or a lengthy conversation, you’ve hit the wall.
+Nov 17
 1
 
 
-
-Using Knative and Ambassador Edge Stack to Handle Traffic
+LLMs on Trial: The African LLM Evaluation Benchmarks Edition
 Ejiro Onose
 Ejiro Onose
 
-in
-
-Ambassador Labs
-
-Using Knative and Ambassador Edge Stack to Handle Traffic
-While Kubernetes is an impressive container orchestration and management tool, it can be quite complex to use and doesn’t quite cut it when…
-7 min read
-·
-Aug 31, 2022
-253
-
+LLMs on Trial: The African LLM Evaluation Benchmarks Edition
+What happens when the jury that evaluates LLMs only represents a fraction of the world? This is the current reality for Al in Africa
+Jul 18
+1
 
 
 Ambassador Edge Stack vs Traefik vs NGINX
-Ejiro Onose
-Ejiro Onose
-
-in
+Ambassador Labs
+In
 
 Ambassador Labs
+
+by
+
+Ejiro Onose
 
 Ambassador Edge Stack vs Traefik vs NGINX
 Ambassador Edge Stack, Traefik, and NGINX are popular tools for implementing an API gateway and load balancer in a Kubernetes environment.
-7 min read
-·
-Jan 26, 2023
+Jan 27, 2023
 273
-
 
 
 See all from Ejiro Onose
 Recommended from Medium
-Comparing RAG Part 2: Vector Stores; FAISS vs Chroma
-Stepkurniawan
-Stepkurniawan
+Choosing the Right Vector Database: OpenSearch vs Pinecone vs Qdrant vs Weaviate vs Milvus vs…
+Elisheba Builds
+Elisheba Builds
 
-Comparing RAG Part 2: Vector Stores; FAISS vs Chroma
-In this study, we examine the impact of two vector stores, FAISS (https://faiss.ai) and Chroma, on the retrieved context to assess their…
-4 min read
-·
-Jan 1, 2024
-29
+Choosing the Right Vector Database: OpenSearch vs Pinecone vs Qdrant vs Weaviate vs Milvus vs…
+Modern AI apps — from RAG-powered chatbots to semantic search and recommendations — rely on vector similarity search. That means choosing a…
+Jul 16
+28
 
 
+Mastering AOP in Spring Boot: Static and Dynamic Proxies with Examples 🚀
+CodeTalks
+CodeTalks
 
-Comparing Vector Databases
-Adam Blum
-Adam Blum
+Mastering AOP in Spring Boot: Static and Dynamic Proxies with Examples 🚀
+Learn the power of Aspect-Oriented Programming in Spring Boot — why proxies matter, how they work, and how to use them effectively.
 
-Comparing Vector Databases
-If you are a developer interested in AI, there is a good chance that you may have started working with Large Language Models such as…
-10 min read
-·
-Nov 9, 2023
-211
-
+Jul 2
 7
 
 
+🔍 7 Popular LLMs Explained in 7 Minutes: GPT, BERT, LLaMA & More
+Rohan Mistry
+Rohan Mistry
 
-Lists
+🔍 7 Popular LLMs Explained in 7 Minutes: GPT, BERT, LLaMA & More
+Curious about what powers ChatGPT, Claude, or Google Gemini? Dive into the architectures behind the biggest large language models in AI…
 
-
-
-Natural Language Processing
-1380 stories
-·
-873 saves
-
-
-
-ChatGPT prompts
-47 stories
-·
-1439 saves
-Sparse embedding or BM25?
-InfiniFlow
-InfiniFlow
-
-Sparse embedding or BM25?
-Since the open-sourcing of Infinity, it has received a wide positive response from the community. Regarding the essential RAG technology we…
-7 min read
-·
-Feb 13, 2024
-16
+Jun 27
+11
 
 
+Building a Text-to-SQL Chatbot with Spring AI
+Java Puzzle
+Java Puzzle
 
-Experimenting with Vector Databases: Chromadb, Pinecone, Weaviate and Pgvector
-Vishnu Sivan
-Vishnu Sivan
+Building a Text-to-SQL Chatbot with Spring AI
+In today’s data-driven world, querying databases in plain English can democratize data access and streamline development.
 
-in
-
-CoinsBench
-
-Experimenting with Vector Databases: Chromadb, Pinecone, Weaviate and Pgvector
-Vector databases are specialized systems designed for storing, managing, and searching embedding vectors. The widespread adoption of…
-10 min read
-·
-Nov 14, 2023
-164
-
+Jul 3
+23
 1
 
 
+How I Built a Vector DB with HNSW from Scratch
+Sarabesh Neelamegham Ravindranath
+Sarabesh Neelamegham Ravindranath
 
-🚀 Blazing Fast Text Embeddings Inference for your RAG
-David Min
-David Min
-
-🚀 Blazing Fast Text Embeddings Inference for your RAG
-Hugging Face — Text Embeddings Inference (TEI)
-6 min read
-·
-Oct 21, 2023
-94
-
+How I Built a Vector DB with HNSW from Scratch
+Give it a try — PuppyDB is available via pip install pup-py-db
+Jun 14
 2
+1
 
 
+RAG Chunking Techniques for Tabular Data: 10 Powerful Strategies
+Towards AI
+In
 
-Vector Database — Introduction and Python Implementation
-Denaya
-Denaya
+Towards AI
 
-Vector Database — Introduction and Python Implementation
-Have you heard about vector databases? They’re everywhere these days, and it’s not just tech enthusiasts buzzing about them. But why the…
-7 min read
-·
-Jan 17, 2024
-89
+by
 
+Tarun Singh
+
+RAG Chunking Techniques for Tabular Data: 10 Powerful Strategies
+Level Up Your RAG Apps: Table Edition 🚀
+
+Jul 28
+8
+2
 
 
 See more recommendations
@@ -396,12 +383,19 @@ About
 
 Careers
 
+Press
+
 Blog
 
 Privacy
+
+Rules
 
 Terms
 
 Text to speech
 
-Teams
+All your favorite parts of Medium are now in one sidebar for easy access.
+Okay, got it
+
+Welcome back. You are signed in as ak••••••••••••@gmail.com. Not you?
